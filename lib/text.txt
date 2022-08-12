@@ -1,0 +1,34 @@
+langkah langkah membuat aplikasi todo
+
+// backend
+1. buat todo model, berfungsi sebagai blueprint aplikasi todo
+2. buat database model dan fungsi insert dan delete data. untuk menggunakan database perlu import beberapa package yaitu sqflite dan path pada pubspec.yaml
+yaitu dengan cara execute 'flutter pub add sqflite' dan 'flutter pub add path'
+3. Setelah memebuat model, kemudian membuat tampilan pada main.dart
+4. kemudian, buat data dummy di database yang telah dibuat. dengan cara import models ke main.dart dan buat objek dari database connect di main.dart
+5. masukan sample todo ke database dan coba untuk print di console. jangan lupa untuk restart semua
+6. jika berhasil menampilkan dalam console. langkah selanjutnya adalah membuat UI widgets dan fungsi
+
+// frontend
+1. buat homepage nya dulu
+2. tambahkan beberapa widgets untuk tampilan UI seperti : Userinput (untuk memasukan data todo), Todocard (visual todo blueprint, checkbox, dan title stuff), todolist (buat nyusun todocardnya)
+3. setelah buat widget nya tambahkan ke homepage
+4. buat todolistnya , kemudian tampilkan data dari database
+5. hapus constant value dari todocard
+6. kemudian, tambahkan functions untuk ditambahkan ke dalam Userinput
+7. kemudian, pass functions to both widgets. (todolist, Userinput)
+8. the  'insertFunction(myTodo);' will lifted up and activate the 'addItem(Todo todo)' function.
+9. untuk fungsi tambah data sudah berhasil
+10. kemudian tambahkan delete function
+11. delete button is on todocard. so we have to lift the function of deletebutton to homepage where our functions are 
+functions will be passed like this -
+homepage -> todolist -> todocard
+12. jika sudah ditambahkan access addItem dan deleteItem function. kemudian pass them ke todocard
+13. kemudian, todocard should tell the addItem and deleteItem functions that what does it want change
+14. kemudian, cek apakah berhasil
+15. jika berhasil hapus data sample yang ada pada main.dart
+
+tambahan
+untuk membuat format tanggal lebih bagus pake package intl
+'flutter pub add intl' in terminal
+atur ulang format tanggal di Todocard
